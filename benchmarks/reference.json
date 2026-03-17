@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "project_experiment_reference",
+  "metrics": {
+    "search_nodes": {"value": 2500000, "display": "2.5M", "unit": "nodes", "definition": "Expanded simulated acquisition nodes on Ray."},
+    "measurement_reduction": {"value": 0.41, "display": "41%", "unit": "fraction", "definition": "Measurement reduction at matched baseline reconstruction accuracy."},
+    "teacher_plans": {"value": 60000, "display": "60K", "unit": "plans", "definition": "MCTS acquisition plans used for policy distillation."},
+    "accuracy_tradeoff": {"value": 0.03, "display": "3%", "unit": "accuracy fraction", "definition": "Student-versus-search accuracy trade-off."},
+    "policy_latency": {"value": 95, "display": "95 ms", "unit": "milliseconds", "definition": "Policy decision time in a live survey loop."},
+    "search_latency": {"value": 40, "display": "40 s", "unit": "seconds", "definition": "Online search time per acquisition step."},
+    "reward_speedup": {"value": 6.8, "display": "6.8x", "unit": "ratio", "definition": "Reward-computation time without reuse divided by time with Redis reuse."},
+    "epoch_before": {"value": 9, "display": "9 hours", "unit": "hours", "definition": "RL epoch duration before the cache improvement."},
+    "epoch_after": {"value": 80, "display": "80 minutes", "unit": "minutes", "definition": "RL epoch duration after the cache improvement."},
+    "gpu_before": {"value": 31, "display": "31%", "unit": "percent", "definition": "GPU utilization before solve reuse."},
+    "gpu_after": {"value": 74, "display": "74%", "unit": "percent", "definition": "GPU utilization after solve reuse."},
+    "throughput": {"value": 310, "display": "310 requests/s", "unit": "requests per second", "definition": "Planner-service request throughput."},
+    "p99_latency": {"value": 140, "display": "140 ms p99", "unit": "milliseconds", "definition": "Ninety-ninth percentile planner-service latency."}
+  },
+  "run_metadata": [
+    "Survey and geological-model identifiers, split membership and measurement units.",
+    "Baseline reconstruction method and accuracy definition.",
+    "Hardware, candidate count, particle count, node budget and plan-count convention.",
+    "Cache resolution, hit rate, cold/warm state and epoch workload.",
+    "Decision timing statistic, HTTP concurrency, error rate and fallback fraction."
+  ],
+  "current_measurement_paths": {
+    "search_counts": "outputs/plans.run.json",
+    "policy_and_search": "outputs/policy-eval.json",
+    "epochs_and_gpu": "outputs/policy.json",
+    "measurement_curve": "outputs/efficiency.json",
+    "service_load": "outputs/loadtest.json"
+  }
+}
