@@ -64,9 +64,8 @@ write workload identifiers, counts, seeds, errors and timings to `outputs/`.
 | Redis client | redis-py 7.1.0 | Shared serialized forward-response cache |
 | FastAPI / Pydantic | 0.128.0 / 2.12.5 | Request validation and planning routes |
 | Prometheus client | 0.23.1 | Decision counters and latency histograms |
-| NumPy / SciPy | 2.3.5 / 1.16.3 | Belief calculations and sparse numerical support |
+| NumPy | 2.3.5 | Belief calculations and numerical arrays |
 | discretize / pymatsolver | 0.12.0 / 0.4.0 | Tensor meshes and sparse LU |
-| pytest / Ruff / mypy | 9.0.2 / 0.14.10 / 1.19.1 | Tests, formatting and type checks |
 
 Optional NVML telemetry uses `nvidia-ml-py==13.590.44`. Exact profiles live in
 [pyproject.toml](pyproject.toml). Redis and Prometheus servers run separately.
